@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <add-node path="/api/package[@name='com.phunware.mapping.manager']">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Cache" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="read" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="write" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+    </interface>
+</add-node>
+<remove-node path="/api/package/class/implements[@name='android.provider.BaseColumns']" />
+    <add-node path="/api/package[@name='com.phunware.mapping.manager']">
+        <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NetworkBuilding" static="false" visibility="public"></class>
+        </add-node>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <add-node path="/api/package[@name='com.phunware.mapping.manager']/class[@name='PhunwareMapManager']">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCurrentBuildingID" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+</add-node>
+</metadata>
